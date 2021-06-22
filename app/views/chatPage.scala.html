@@ -1,0 +1,13 @@
+@(username:String)(implicit request: RequestHeader, flash : Flash)
+
+@main("WebSocket Chat"){
+    <input type="hidden" id="ws-route" value="@routes.WebSocketChat.socket.absoluteURL()">
+    <input type="hidden" id="username" value="@username">
+
+    <textarea id="chat-area" rows="15" cols="80" readonly></textarea>
+    <br>
+    <input type="text" id ="chat-input" size="65" placeholder="Type here...">
+    <input type="button" id="submit" value="Send">
+    <script src="@routes.Assets.versioned("javascripts/chat.js")" type="text/javascript"></script>
+
+}

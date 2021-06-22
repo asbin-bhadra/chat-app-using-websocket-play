@@ -1,0 +1,10 @@
+@import helper._
+@(user: Form[model.User])
+
+@main("Welcome to Play") {
+@form(action = routes.WebSocketChat.chat) {
+<!--<form method="post" action=""-->
+<p><label>Username</label> <input type="text" name="username"></p>
+<p><label><input type="submit" value="Login"></label></p>
+}
+}
